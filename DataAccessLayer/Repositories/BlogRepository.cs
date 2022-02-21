@@ -20,6 +20,11 @@ namespace DataAccessLayer.Repositories
             }
         }
 
+        public void Delete(Blog t)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteBlog(Blog blog)
         {
             using (var _context = new Context())
@@ -27,6 +32,11 @@ namespace DataAccessLayer.Repositories
                 _context.Remove(blog);
                 _context.SaveChanges();
             }
+        }
+
+        public List<Blog> GetAll()
+        {
+            throw new NotImplementedException();
         }
 
         public List<Blog> GetAllBlogs()
@@ -43,6 +53,21 @@ namespace DataAccessLayer.Repositories
             {
                 return _context.Blogs.Find(id);
             }
+        }
+
+        public Blog GetByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(Blog t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Blog t)
+        {
+            throw new NotImplementedException();
         }
 
         public void UpdateBlog(Blog blog)

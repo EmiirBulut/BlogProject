@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrate
+@model List<Category>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<table class="table table-striped">
+    <tr>
+        <th>CategoryID</th>
+        <th>CategoryName</th>
+        <th>CategoryStatus</th>
+        <th>CategoryDetails</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+	{
+		 <tr>
+             <td>@item.CategoryID</td>
+             <td>@item.CategoryName</td>
+             <td>@item.CategoryStatus</td>
+             <td><a href="#" class="btn btn-warning">Details</a></td>
+             <td><a href="#" class="btn btn-danger">Delete</a></td>
+         </tr>
+	}
+</table>
