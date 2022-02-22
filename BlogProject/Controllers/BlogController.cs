@@ -13,7 +13,13 @@ namespace BlogProject.Controllers
         BlogManager blogManager = new BlogManager(new EFBlogRepository());
         public IActionResult Index()
         {
-            var values = blogManager.GetBlogs();
+            var values = blogManager.GetBlogsWithCategory();
+            return View(values);
+        }
+
+        public IActionResult BlogReadAll(int id)
+        {
+            var values = blogManager.GetBlogByID(id);
             return View(values);
         }
     }
